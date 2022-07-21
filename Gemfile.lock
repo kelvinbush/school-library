@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    school-library (0.1.0)
+    school-library (1)
 
 GEM
   remote: https://rubygems.org/
