@@ -1,8 +1,6 @@
-require_relative 'lib/school/library/version'
-
 Gem::Specification.new do |spec|
   spec.name = 'school-library'
-  spec.version = School::Library::VERSION
+  spec.version = 1
   spec.authors = ['Kelvin Bush']
   spec.email = ['kelybush@gmail.com']
 
