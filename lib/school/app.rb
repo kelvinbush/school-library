@@ -5,8 +5,6 @@ require_relative 'rental'
 # rubocop:disable Metrics
 
 class App
-  attr_accessor :rentals, :books, :people
-
   def initialize
     @rentals = []
     @books = []
