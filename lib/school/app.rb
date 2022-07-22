@@ -60,7 +60,7 @@ class App
 
   def create_person
     print 'Do you want to create a student (1) or a teacher (2). [Input the number]: '
-    person_option = gets.chomp.to_i
+    person_option = gets.chomp
 
     if [1, 2].include?(person_option)
       print 'Enter the age:'
