@@ -19,7 +19,7 @@ To get a local copy up and running follow these simple example steps.
 - Open the command prompt in this directory.
 - Write `https://github.com/kelvinbush/school-library.git`.
 - Go to the repository folder in your command prompt `cd school-library`.
-- run `bundle install`
+- run `bundle install` to install rubocop dependencies
 
 ## Authors
 
