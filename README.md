@@ -29,6 +29,12 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@kelvin_bush_](https://twitter.com/kelvin_bush_)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kelvin-wachiye-04b469173/)
 
+👤 **Leonard Kombo**
+
+- GitHub: [@leonardkombo](https://github.com/leonard33)
+- Twitter: [@leonard_kombo_](https://twitter.com/leonardkombo1)
+- LinkedIn: [Leonard LinkedIn](https://www.linkedin.com/in/leonardkombo/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
