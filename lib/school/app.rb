@@ -3,7 +3,6 @@ require_relative 'student'
 require_relative 'teacher'
 require_relative 'rental'
 require 'json'
-require 'fileutils'
 # rubocop:disable Metrics
 
 class App
