@@ -72,6 +72,47 @@ class App
     end
   end
 
+  def save_files
+    books = []
+    rentals = []
+    people = []
+
+    @books.each do |book|
+      books << {
+        title: book.title,
+        author: book.author
+      }
+    end
+
+    @rentals.each do |rental|
+      rentals << {
+        date: rental.date,
+        person: rental.person.name,
+        book: rental.book.title
+      }
+    end
+
+    @people.each do |person|
+      people << if person.is_a? Student
+                  {
+                    age: person.age,
+                    name: person.name,
+                    parent_permission: person.parent_permission
+                  }
+                else
+                  person.is_a? Teacher
+                  {
+                    age: person.age,
+                    name: person.name,
+                    specialization: person.specialization
+                  }
+                end
+    end
+
+    File.open(@books_path, "w") { |f| f.write JSON.generate(books) }
+    File.open(@rentals_path, "w") { |f| f.write JSON.generate(rentals) }
+    File.open(@people_path, "w") { |f| f.write JSON.generate(people) }
+  end
 
 end
 
