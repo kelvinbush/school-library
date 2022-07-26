@@ -114,6 +114,35 @@ class App
     File.open(@people_path, "w") { |f| f.write JSON.generate(people) }
   end
 
+  def load_books
+    books = JSON.parse(File.read(@books_path))
+    books.each do |book|
+      @books << Book.new(book['title'], book['author'])
+    end
+
+  end
+
+  def load_people
+    people = JSON.parse(File.read(@people_path))
+    people.each do |person|
+      @people <<
+        if person['specialization']
+          Teacher.new(person['specialization'], person['age'], person['name'])
+        else
+          Student.new(person['age'], person['name'], parent_permission: person['parent_permission'])
+        end
+    end
+  end
+
+  def load_rentals
+    rentals = JSON.parse(File.read(@rentals_path))
+    rentals.each do |rental|
+      @rentals << Rental.new(rental['date'],
+                             @people.select { |person| person.name == rental['person'] }.first,
+                             @books.select { |book| book.title == rental['book'] }.first)
+    end
+  end
+
 end
 
 # rubocop:enable Metrics
