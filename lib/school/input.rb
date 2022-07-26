@@ -50,6 +50,15 @@ class Input
     end
   end
 
+  def rentals_per_person
+    if @app.rentals.length.positive?
+      print 'Enter id of person you want rentals for:'
+      person_id = gets.chomp.to_i
+      @app.list_rentals(person_id)
+    else
+      puts 'Rentals is empty 😥'
+    end
+  end
 
   def create_book
     print 'Enter the title:'
