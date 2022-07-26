@@ -1,4 +1,5 @@
 require_relative 'app'
+# rubocop:disable Metrics
 
 class Input
   def initialize
@@ -74,7 +75,6 @@ class Input
     display_actions
   end
 
-
   def display_actions
     puts 'Please choose an option by entering a number'
     puts '1. List all books.'
@@ -112,3 +112,5 @@ class Input
     display_actions
   end
 end
+
+# rubocop:enable Metrics

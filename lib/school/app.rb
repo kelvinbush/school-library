@@ -2,7 +2,6 @@ require_relative 'book'
 require_relative 'student'
 require_relative 'teacher'
 require_relative 'rental'
-# rubocop:disable Metrics
 
 class App
   attr_accessor :people, :rentals, :books
@@ -59,7 +58,4 @@ class App
       puts 'You have no books added!'
     end
   end
-
 end
-
-# rubocop:enable Metrics
