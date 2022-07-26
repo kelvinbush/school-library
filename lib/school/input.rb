@@ -105,6 +105,7 @@ class Input
     when '6'
       rentals_per_person
     when '7'
+      @app.save_files
       exit
     else
       puts 'Invalid input kindly choose between (1-7)'
