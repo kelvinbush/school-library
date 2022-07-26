@@ -2,14 +2,27 @@ require_relative 'book'
 require_relative 'student'
 require_relative 'teacher'
 require_relative 'rental'
+require 'json'
+require 'fileutils'
+# rubocop:disable Metrics
 
 class App
   attr_accessor :people, :rentals, :books
 
   def initialize
-    @rentals = []
     @books = []
     @people = []
+    @rentals = []
+    @books_path = "./../file/books.json"
+    @people_path = "./../file/people.json"
+    @rentals_path = "./../file/rentals.json"
+    initialize_files
+  end
+
+  def initialize_files
+    File.write(@books_path, []) unless File.exist?(@books_path)
+    File.write(@people_path, []) unless File.exist?(@people_path)
+    File.write(@rentals_path, []) unless File.exist?(@rentals_path)
   end
 
   def create_student(age, name, parent_permission)
@@ -58,4 +71,8 @@ class App
       puts 'You have no books added!'
     end
   end
+
+
 end
+
+# rubocop:enable Metrics
