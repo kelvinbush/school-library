@@ -23,6 +23,9 @@ class App
     File.write(@books_path, []) unless File.exist?(@books_path)
     File.write(@people_path, []) unless File.exist?(@people_path)
     File.write(@rentals_path, []) unless File.exist?(@rentals_path)
+    load_books
+    load_people
+    load_rentals
   end
 
   def create_student(age, name, parent_permission)
