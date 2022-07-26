@@ -1,7 +1,7 @@
 require_relative 'input'
 
 def main
-  Input.new.run
+  App.new.run
 end
 
 main
