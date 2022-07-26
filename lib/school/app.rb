@@ -3,6 +3,7 @@ require_relative 'student'
 require_relative 'teacher'
 require_relative 'rental'
 require 'json'
+require 'fileutils'
 # rubocop:disable Metrics
 
 class App
@@ -19,6 +20,7 @@ class App
   end
 
   def initialize_files
+    FileUtils.mkdir_p('./../file') unless File.directory?('./../file')
     File.write(@books_path, []) unless File.exist?(@books_path)
     File.write(@people_path, []) unless File.exist?(@people_path)
     File.write(@rentals_path, []) unless File.exist?(@rentals_path)
