@@ -13,9 +13,9 @@ class App
     @books = []
     @people = []
     @rentals = []
-    @books_path = "./../file/books.json"
-    @people_path = "./../file/people.json"
-    @rentals_path = "./../file/rentals.json"
+    @books_path = './../file/books.json'
+    @people_path = './../file/people.json'
+    @rentals_path = './../file/rentals.json'
     initialize_files
   end
 
@@ -112,9 +112,9 @@ class App
                 end
     end
 
-    File.open(@books_path, "w") { |f| f.write JSON.generate(books) }
-    File.open(@rentals_path, "w") { |f| f.write JSON.generate(rentals) }
-    File.open(@people_path, "w") { |f| f.write JSON.generate(people) }
+    File.write(@books_path, JSON.generate(books))
+    File.write(@rentals_path, JSON.generate(rentals))
+    File.write(@people_path, JSON.generate(people))
   end
 
   def load_books
@@ -122,7 +122,6 @@ class App
     books.each do |book|
       @books << Book.new(book['title'], book['author'])
     end
-
   end
 
   def load_people
@@ -145,7 +144,6 @@ class App
                              @books.select { |book| book.title == rental['book'] }.first)
     end
   end
-
 end
 
 # rubocop:enable Metrics
