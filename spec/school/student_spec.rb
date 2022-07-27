@@ -7,7 +7,7 @@ RSpec.describe Student do
 
   context 'when condition new student is created' do
     it 'should be of Student class' do
-      expect(@student.is_a? Student).to eq true
+      expect(@student.is_a?(Student)).to eq true
     end
 
     it 'should play hooky' do

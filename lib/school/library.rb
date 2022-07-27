@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-require_relative "library/version"
+require_relative 'library/version'
 
 module School
   module Library

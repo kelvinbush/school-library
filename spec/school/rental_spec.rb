@@ -11,7 +11,7 @@ RSpec.describe Rental do
 
   context 'when condition date, person and book given' do
     it 'should create a rental' do
-      expect(@rental.is_a? Rental).to eq true
+      expect(@rental.is_a?(Rental)).to eq true
     end
 
     it 'should get correct person of given person' do

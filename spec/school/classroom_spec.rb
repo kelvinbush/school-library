@@ -10,7 +10,7 @@ RSpec.describe Classroom do
   context 'when condition new Classroom is created' do
     it 'should be able to add new student' do
       @student.classroom = @classroom
-      expect(@classroom.students.include? @student).to eq true
+      expect(@classroom.students.include?(@student)).to eq true
     end
 
     it 'should return the correct label' do

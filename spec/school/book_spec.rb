@@ -6,7 +6,7 @@ RSpec.describe Book do
   end
   context 'when condition new book is created' do
     it 'should be of book instance' do
-      expect(@book.is_a? Book).to eq true
+      expect(@book.is_a?(Book)).to eq true
     end
 
     it 'should have the correct author' do
